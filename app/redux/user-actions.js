@@ -4,6 +4,7 @@ export const SET_PAWWSORD = 'SET_PAWWSORD';
 export const SET_CONFIRM_PASSWORD = 'SET_CONFIRM_PASSWORD';
 export const SUBMIT_USER_DATA = 'SUBMIT_USER_DATA';
 export const INCREMNT_DATA = 'INCREMNT_DATA';
+export const USER_LOGIN = 'USER_LOGIN';
 
 export const setUserame = name => dispatch => {
     console.log('name', name);
@@ -43,6 +44,17 @@ export const submitUserData = (data) => dispatch => {
         console.log('data', data);
         dispatch({
             type: SUBMIT_USER_DATA,
+            payload: data,
+        });
+    } catch (error) {
+    }
+}
+
+export const userLogin = (data) => dispatch => {
+    try {
+        console.log('data', data);
+        dispatch({
+            type: USER_LOGIN,
             payload: data,
         });
     } catch (error) {
