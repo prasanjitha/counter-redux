@@ -5,11 +5,14 @@ import { Provider } from 'react-redux';
 import Mountain from './app/Mountain';
 import { Store } from './app/redux/store';
 import Register from './app/screens/Register';
+import Navigation from './Navigation';
+import { firebase } from './app/config/firebase';
+import { useEffect, useState } from 'react';
 
 export default function App() {
   return (
     <Provider store={Store}>
-      <Register />
+      <Navigation />
     </Provider>
   );
 }

@@ -1,10 +1,11 @@
-import { SET_CONFIRM_PASSWORD, SET_EMAIL, SET_PAWWSORD, SET_USER_NAME, SUBMIT_USER_DATA, INCREMNT_DATA } from './user-actions';
+import { SET_CONFIRM_PASSWORD, SET_EMAIL, SET_PAWWSORD, SET_USER_NAME, SUBMIT_USER_DATA, INCREMNT_DATA, SET_PHONE } from './user-actions';
 
 const initialState = {
     username: '',
     email: '',
     password: '',
     conPassword: '',
+    phone: '',
     registerData: {},
     count: 0,
 }
@@ -15,6 +16,8 @@ function registerReducer(state = initialState, action) {
             return { ...state, username: action.payload };
         case SET_EMAIL:
             return { ...state, email: action.payload };
+        case SET_PHONE:
+            return { ...state, phone: action.payload };
         case SET_PAWWSORD:
             return { ...state, password: action.payload };
         case SET_CONFIRM_PASSWORD:
